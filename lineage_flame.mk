@@ -23,6 +23,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/flame/flame:10/QQ3A.200805.001/6578210:user/release-keys
 
+# OpenGApps
+GAPPS_VARIANT := pico
+
 # Include flame before coral to use flame versions of blobs if they exist
 $(call inherit-product-if-exists, vendor/google/flame/flame-vendor.mk)
 $(call inherit-product-if-exists, vendor/google/coral/coral-vendor.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
